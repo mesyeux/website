@@ -29,6 +29,7 @@ function Experience() {
               <img src={dbsLogo} />
               <h3>DBS Software Engineering Internship</h3>
             </div>
+            <div className="experience-item active"></div>
             <div
               class={
                 showElement ? "vertical-line active" : "vertical-line inactive"

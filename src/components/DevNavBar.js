@@ -1,9 +1,11 @@
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import { CiInstagram, CiLinkedin } from "react-icons/ci";
+import { CiInstagram, CiLinkedin, CiMail } from "react-icons/ci";
+import { BsDownload } from "react-icons/bs";
 import { VscGithubAlt } from "react-icons/vsc";
 import { Link } from "react-router-dom";
+import resumePdf from "../assets/Chloe_Lau_Cheuk_Ying_Resume.pdf";
 
 function DevNavBar() {
   const [activeLink, setActiveLink] = useState("home");
@@ -92,16 +94,23 @@ function DevNavBar() {
               <Link to="https://github.com/mesyeux" target="_blank">
                 <VscGithubAlt className="dev-social-icon" />
               </Link>
+              <Link to="https://github.com/mesyeux" target="_blank">
+                <CiMail className="dev-social-icon" />
+              </Link>
             </div>
             <Nav.Link
-              href="#contact"
+              href="#resume"
               className={
                 activeLink === "contact" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("contact")}
             >
               <button className="vvd" onClick={() => console.log("connect")}>
-                <span>contact</span>
+                {/* <span>download resume</span> */}
+                <a href={resumePdf} download>
+                  resume &nbsp;
+                  <BsDownload />
+                </a>
               </button>
             </Nav.Link>
           </span>

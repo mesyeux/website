@@ -64,7 +64,11 @@ function DevBanner() {
             <p>I am a computer science student and model.</p>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <img src={headerImg} alt="Header Img"></img>
+            <img
+              src={headerImg}
+              alt="Header Img"
+              className="bouncing-img"
+            ></img>
           </Col>
         </Row>
       </Container>
