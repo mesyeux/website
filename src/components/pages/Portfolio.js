@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "../../App.css";
 import Cards from "../Cards";
 import ModelNavbar from "../ModelNavbar";
-import { COVERIMAGES } from "../images";
+import { COVERIMAGES } from "../images/index.js";
 import { useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Socials from "../Socials";

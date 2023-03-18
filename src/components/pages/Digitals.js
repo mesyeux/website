@@ -1,6 +1,6 @@
 import React from "react";
 import ModelNavbar from "../ModelNavbar";
-import { DIGITALS } from "../images";
+import { DIGITALS } from "../images/index.js";
 import Cards from "../Cards";
 import Socials from "../Socials";
 import { useState } from "react";

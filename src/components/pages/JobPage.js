@@ -1,7 +1,7 @@
 import React from "react";
 import CardItem from "../CardItem";
 import ModelNavbar from "../ModelNavbar";
-import { COVERIMAGES } from "../images";
+import { COVERIMAGES } from "../images/index.js";
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import Socials from "../Socials";

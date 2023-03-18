@@ -1,8 +1,8 @@
 import React from "react";
 import ModelNavbar from "../ModelNavbar";
 import CardItem from "../CardItem";
-import { DIGITALS } from "../images";
-import { COVERIMAGES } from "../images";
+import { DIGITALS } from "../images/index.js";
+import { COVERIMAGES } from "../images/index.js";
 import { TabContainer, Tab, Row, Col, Nav, Container } from "react-bootstrap";
 import { useState } from "react";
 import { BsArrowLeftRight } from "react-icons/bs";
