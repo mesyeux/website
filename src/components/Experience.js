@@ -121,8 +121,8 @@ function Experience() {
               </a>
             </div>
             <div className="experience-item-desc">
-              {activeTab === "role" ? (
-                <div>Fullstack Software Developer</div>
+              {activeTab === "roles" ? (
+                <div>Fullstack Software Engineering Intern</div>
               ) : activeTab === "responsibilities" ? (
                 <div>
                   <p>
