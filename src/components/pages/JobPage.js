@@ -29,11 +29,7 @@ export const JobPage = (props) => {
       <div className="job-page-images">
         {array.map((item) => (
           <CardItem
-            src={require("/Users/chlo/website/portfolio/src/assets/images/" +
-              folder +
-              "/" +
-              item +
-              ".jpg")}
+            src={"/images/" + folder + "/" + item + ".jpg"}
             label="lookbook"
             displayModal={displayModal}
           />

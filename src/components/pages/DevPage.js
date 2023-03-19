@@ -5,8 +5,6 @@ import Skills from "../Skills";
 import Projects from "../Projects";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Experience from "../Experience";
-import Socials from "../Socials";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import BottomBar from "../BottomBar";
 
 function DevPage() {
