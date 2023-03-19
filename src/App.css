@@ -32,6 +32,14 @@ h1, h2, h3, h4, h5, h6 {
     line-height: normal;
 }
 
+.model-link {
+  color: #ffffffd2;
+}
+
+.model-link:hover {
+  color: #fff;
+}
+
 .job-page-images {
   background-color: var(--beige);
   height: 100vh;
@@ -62,7 +70,8 @@ nav.navbar {
   }
   nav.navbar a.navbar-brand {
     color: #fff;
-      width: 9%;
+    width: 9%;
+    font-size: 1.5rem;
   }
   nav.navbar .navbar-nav .nav-link.navbar-link {
     font-weight: 400;
@@ -269,9 +278,9 @@ nav.navbar {
   
   .banner img {
     animation: updown 3s linear infinite;
-    width: 300px;
+    width: 400px;
     height: 400px; 
-    margin-left: 100px;
+    margin-left: 50px;
   }
 
   @keyframes updown {
@@ -420,6 +429,9 @@ nav.navbar {
 .project-image {
   width: 80%;
   height: 80%;
+  padding: 15px;
+  border: 1px #AA367C groove;
+  border-radius: 10px;
 }
 
 .project-links {
@@ -444,25 +456,12 @@ nav.navbar {
 /* Experience */
 .experience {
   text-align: center;
-  background-color: #000;
 }
 
 .experience-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.experience .carousel {
-  margin: 60px 0 0 0;
-}
-
-.experience .carousel .carousel-item {
-  border-radius: 100px;
-}
-
-.experience .carousel .carousel-item {
-  position: relative;
 }
 
 .experience-description {
@@ -483,28 +482,60 @@ nav.navbar {
   height: 1000px;
 }
 
-.experience-item {
-  background-color:rgba(255, 255, 255, 0.25);
+.experience-item-img {
+  background-color:rgba(197, 197, 197, 0.498);
   width: 300px;
   height: 300px; 
-  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 10px 10px 4.5px rgb(99, 91, 101); */
+  z-index: 11;
 }
 
-.experience-item:hover {
+.experience-item-img:hover {
   cursor:pointer;
 }
 
-.experience-item.active {
-  animation: moveLeft 0.8s ease forwards;
-}
-
-.experience-item.inactive {
-  animation: moveRight 0.8s ease forwards;
+.experience-item-img img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
 
 .experience-item-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
   height: 300px;
+  margin: 30px;
+}
+
+.experience-item-tabs {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.experience-item-tabs .nav-item {
+  margin: 30px 0px 30px 0px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.experience-item-tabs .nav-item:hover {
+  cursor: pointer;
+}
+
+.experience-item-tabs .nav-item.active {
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  border-radius: 10px;
+}
+
+.experience-item-desc {
+  align-self: center;
+  padding: 30px;
+  font-size: 1rem;
 }
 
 @keyframes moveLeft {
@@ -537,12 +568,6 @@ nav.navbar {
 .vertical-line.inactive {
   visibility: 0;
   opacity: 0;
-}
-
-.experience-item img{
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
 }
 
 .card:hover {
@@ -626,6 +651,10 @@ nav.navbar {
 
 .stats-container .row {
   margin-top: 10px;
+}
+
+.info-container p {
+  text-align: center;
 }
 
 

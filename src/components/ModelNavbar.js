@@ -40,7 +40,7 @@ function ModelNavbar(props) {
       <nav className="model-navbar">
         <div className="model-container">
           <Link to="/" className="model-navbar-logo" onClick={closeMobileMenu}>
-            chloe lau
+            chloe lau.
           </Link>
           <div className="model-navbar-container">
             <div className="menu-icon" onClick={handleClick}>
@@ -96,12 +96,12 @@ function ModelNavbar(props) {
                         link="/portfolio/runway"
                         onClick={() => handleOnClick("runway", "RUNWAY")}
                       />
-                      <DropDownItem
+                      {/* <DropDownItem
                         exact
                         text="Tests"
                         link="/portfolio/tests"
                         onClick={() => handleOnClick("test", "TESTS")}
-                      />
+                      /> */}
                       <DropDownItem
                         exact
                         text="All"

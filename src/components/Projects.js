@@ -3,7 +3,9 @@ import { Container, Row, Col, Tab } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Badge from "react-bootstrap/Badge";
 import planitImg from "../assets/images/planit-image.png";
+import awsImg from "../assets/images/aws.png";
 import { Link } from "react-router-dom";
+import proposalPdf from "../assets/aws_ppt.pdf";
 
 function Projects() {
   return (
@@ -55,12 +57,17 @@ function Projects() {
                           SWE Design Principles
                         </Badge>
                       </div>
-
                       <p className="project-description">
-                        A task planner for Computer Science students Designed
-                        and developed a brown-field application for task
-                        planning, incorporating object-oriented paradigms with
-                        teammates
+                        PlanIT is an application for managing tasks, tailored
+                        specifically for NUS Computing students, featuring
+                        simple command formats catered to fast typists.
+                        Interaction is through a CLI, with a GUI created with
+                        JavaFX. The application is written with Java.
+                      </p>
+                      <p className="project-description">
+                        I was in charge of designing and adding certain features
+                        to the brown-field application, such as the ability to
+                        remove task fields and countdown to a task date.
                       </p>
                       <div className="project-links">
                         <Link
@@ -94,11 +101,15 @@ function Projects() {
                         </Badge>
                       </div>
                       <p className="project-description">
-                        Worked on query processing subunit (parsing & query
-                        validation) to build static program analyser from
-                        scratch - Planned and designed components and APIs,
-                        coded, did unit and system testing - Utilized: C++, Git,
-                        software engineering design principles
+                        A Static Program Analyzer is a tool that helps to debug
+                        by examining source code before a program is run. In
+                        this project, I was in charge of the query processing
+                        subunit, where queries are parsed and validated. I
+                        designed the logic with which components used to
+                        communicate, implemented tokenization for parsing, and
+                        designed the way they were validated. We designed
+                        components and APIs, and also did unit and system
+                        testing.
                       </p>
                     </section>
                   </Tab.Pane>
@@ -111,6 +122,14 @@ function Projects() {
                         other teammates to come up with proposals to alleviate
                         problems regarding WIFI data using AWS services
                       </p>
+
+                      <div className="project-links">
+                        <a href={proposalPdf} download>
+                          Project Proposal
+                        </a>
+                      </div>
+
+                      <img src={awsImg} className="project-image" />
                     </section>
                   </Tab.Pane>
                 </Tab.Content>

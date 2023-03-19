@@ -35,7 +35,7 @@ function DevNavBar() {
       <Container>
         <Navbar.Brand href="#home">
           <Link to="/" className="navbar-brand">
-            chloe lau
+            chloe lau.
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -60,15 +60,6 @@ function DevNavBar() {
               skills
             </Nav.Link>
             <Nav.Link
-              href="#projects"
-              className={
-                activeLink === "projects" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              projects
-            </Nav.Link>
-            <Nav.Link
               href="#experience"
               className={
                 activeLink === "experience"
@@ -78,6 +69,15 @@ function DevNavBar() {
               onClick={() => onUpdateActiveLink("experience")}
             >
               experience
+            </Nav.Link>
+            <Nav.Link
+              href="#projects"
+              className={
+                activeLink === "projects" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("projects")}
+            >
+              projects
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
@@ -93,9 +93,6 @@ function DevNavBar() {
               </Link>
               <Link to="https://github.com/mesyeux" target="_blank">
                 <VscGithubAlt className="dev-social-icon" />
-              </Link>
-              <Link to="https://github.com/mesyeux" target="_blank">
-                <CiMail className="dev-social-icon" />
               </Link>
             </div>
             <Nav.Link

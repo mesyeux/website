@@ -60,7 +60,7 @@ const COVERIMAGES = [
     folder: "jw-anderson",
     path: "/images/cover/8.jpg",
     title: "J.W Anderson F/W London Fashion Week",
-    noOfItems: 4,
+    noOfItems: 2,
     filter: "runway",
   },
   {

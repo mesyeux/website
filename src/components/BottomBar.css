@@ -10,7 +10,7 @@
     grid-auto-flow: column;
 }
 
-.made-by {
+.made-by, .contact {
     font-size: 0.8rem;
     color: #fff;
     width: 100%;

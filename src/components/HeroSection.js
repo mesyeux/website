@@ -23,7 +23,7 @@ function HeroSection() {
           buttonSize="btn--large"
           destination="portfolio"
         >
-          LALALA
+          The Model
         </Button>
       </div>
     </div>
