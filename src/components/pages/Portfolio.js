@@ -4,9 +4,7 @@ import Cards from "../Cards";
 import ModelNavbar from "../ModelNavbar";
 import { COVERIMAGES } from "../images/index.js";
 import { useState } from "react";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Socials from "../Socials";
-import { Modal } from "react-bootstrap";
 
 function Portfolio(props) {
   const [images, setImages] = useState(COVERIMAGES);

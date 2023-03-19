@@ -7,10 +7,7 @@ import Resume from "./components/pages/Resume";
 import Digitals from "./components/pages/Digitals";
 import { JobPage } from "./components/pages/JobPage";
 import Profile from "./components/pages/Profile";
-import Navbar from "./components/ModelNavbar";
-import BottomBar from "./components/BottomBar";
 import DevPage from "./components/pages/DevPage";
-import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   return (

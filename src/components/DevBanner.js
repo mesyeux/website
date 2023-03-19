@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ChevronDown } from "react-bootstrap-icons";
 import { useState } from "react";
 import headerImg from "../assets/images/header.png";
-import headerImg2 from "../assets/images/header2.svg";
 
 function DevBanner() {
   const [loopNum, setLoopNum] = useState(0); //to indicate which index is being displayed

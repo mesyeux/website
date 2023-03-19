@@ -1,9 +1,6 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Card } from "react-bootstrap";
 import dbsLogo from "../assets/images/dbs.png";
 import { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
 
 function Experience() {
   const [showElement, setShowElement] = useState(false);

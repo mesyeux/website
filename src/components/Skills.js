@@ -1,14 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import meter1 from "../assets/images/meter1.svg";
-import meter2 from "../assets/images/meter2.svg";
-import meter3 from "../assets/images/meter3.svg";
 import colorSharp from "../assets/images/color-sharp.png";
-import { SKILLS } from "./images";
+import { SKILLS } from "./images/index.js";
 import Carousel from "react-multi-carousel";
 import { Image } from "semantic-ui-react";
 import "react-multi-carousel/lib/styles.css";
-import image1 from "../assets/images/react.png";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from 'react-responsive-carousel';
 
