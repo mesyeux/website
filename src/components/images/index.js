@@ -189,7 +189,7 @@ const DIGITALS = [
 ];
 
 const SKILLS = {
-  react: require("/Users/chlo/website/portfolio/src/assets/images/react.png"),
+  // react: require("/Users/chlo/website/portfolio/src/assets/images/react.png"),
   angular: require("/Users/chlo/website/portfolio/src/assets/images/angular.png"),
   html: require("/Users/chlo/website/portfolio/src/assets/images/html.png"),
   css: require("/Users/chlo/website/portfolio/src/assets/images/css.png"),
