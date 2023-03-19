@@ -2,7 +2,7 @@ const COVERIMAGES = [
   {
     id: "1",
     folder: "mytheresa",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/1.jpg"),
+    path: "/images/cover/1.jpg",
     title: "My Theresa Lookbook",
     noOfItems: 10,
     filter: "lookbook",
@@ -10,7 +10,7 @@ const COVERIMAGES = [
   {
     id: "2",
     folder: "holzweiler-ecomm",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/2.jpg"),
+    path: "/images/cover/2.jpg",
     title: "Holzweiler E-commerce",
     noOfItems: 12,
     filter: "ecommerce",
@@ -18,7 +18,7 @@ const COVERIMAGES = [
   {
     id: "3",
     folder: "one-magazine",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/3.jpg"),
+    path: "/images/cover/3.jpg",
     title: "One Magazine",
     noOfItems: 9,
     filter: "editorial",
@@ -26,7 +26,7 @@ const COVERIMAGES = [
   {
     id: "4",
     folder: "icon-april-21",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/4.jpg"),
+    path: "/images/cover/4.jpg",
     title: "Icon Magazine",
     noOfItems: 1,
     filter: "editorial",
@@ -34,7 +34,7 @@ const COVERIMAGES = [
   {
     id: "5",
     folder: "sabrina-goh",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/5.jpg"),
+    path: "/images/cover/5.jpg",
     title: "Sabrina Goh E-commerce",
     noOfItems: 13,
     filter: "ecommerce",
@@ -42,7 +42,7 @@ const COVERIMAGES = [
   {
     id: "6",
     folder: "pin-prestige-nov-21",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/6.jpg"),
+    path: "/images/cover/6.jpg",
     title: "PIN Prestige Magazine Nov 2021 Issue",
     noOfItems: 2,
     filter: "editorial",
@@ -50,7 +50,7 @@ const COVERIMAGES = [
   {
     id: "7",
     folder: "icon-june-21",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/7.jpg"),
+    path: "/images/cover/7.jpg",
     title: "Icon Magazine June 2021 Issue",
     noOfItems: 5,
     filter: "editorial",
@@ -58,7 +58,7 @@ const COVERIMAGES = [
   {
     id: "8",
     folder: "jw-anderson",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/8.jpg"),
+    path: "/images/cover/8.jpg",
     title: "J.W Anderson F/W London Fashion Week",
     noOfItems: 4,
     filter: "runway",
@@ -66,7 +66,7 @@ const COVERIMAGES = [
   {
     id: "9",
     folder: "nuyou-mar-21",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/9.jpg"),
+    path: "/images/cover/9.jpg",
     title: "NUYOU Magazine March 2021 Issue",
     noOfItems: 4,
     filter: "editorial",
@@ -74,7 +74,7 @@ const COVERIMAGES = [
   {
     id: "10",
     folder: "pin-prestige-may-21",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/10.jpg"),
+    path: "/images/cover/10.jpg",
     title: "PIN Prestige May 2021 Issue",
     noOfItems: 8,
     filter: "editorial",
@@ -82,7 +82,7 @@ const COVERIMAGES = [
   {
     id: "11",
     folder: "phylum-of-beauty",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/11.jpg"),
+    path: "/images/cover/11.jpg",
     title: "Phylum of Beauty",
     noOfItems: 6,
     filter: "editorial",
@@ -90,7 +90,7 @@ const COVERIMAGES = [
   {
     id: "12",
     folder: "holzweiler-lookbook",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/12.jpg"),
+    path: "/images/cover/12.jpg",
     title: "Holzweiler Lookbook",
     noOfItems: 19,
     filter: "lookbook",
@@ -98,7 +98,7 @@ const COVERIMAGES = [
   {
     id: "13",
     folder: "odalisque",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/13.jpg"),
+    path: "/images/cover/13.jpg",
     title: "Odalisque Magazine",
     noOfItems: 16,
     filter: "editorial",
@@ -106,7 +106,7 @@ const COVERIMAGES = [
   {
     id: "14",
     folder: "nuyou-beauty",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/14.jpg"),
+    path: "/images/cover/14.jpg",
     title: "NUYOU Magazine Beauty",
     noOfItems: 4,
     filter: "editorial",
@@ -114,7 +114,7 @@ const COVERIMAGES = [
   {
     id: "15",
     folder: "the-peak",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/15.jpg"),
+    path: "/images/cover/15.jpg",
     title: "The Peak Magazine",
     noOfItems: 5,
     filter: "editorial",
@@ -122,7 +122,7 @@ const COVERIMAGES = [
   {
     id: "16",
     folder: "icon-mar-2021",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/16.jpg"),
+    path: "/images/cover/16.jpg",
     title: "Icon Magazine",
     noOfItems: 5,
     filter: "editorial",
@@ -130,7 +130,7 @@ const COVERIMAGES = [
   {
     id: "17",
     folder: "eileen",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/cover/17.jpg"),
+    path: "/images/cover/17.jpg",
     title: "LASALLE Graduation Project",
     noOfItems: 21,
     filter: "lookbook",
@@ -140,51 +140,51 @@ const COVERIMAGES = [
 const DIGITALS = [
   {
     id: "1",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/1.jpg"),
+    path: "/images/digitals/1.jpg",
   },
   {
     id: "2",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/2.jpg"),
+    path: "/images/digitals/2.jpg",
   },
   {
     id: "3",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/3.jpg"),
+    path: "/images/digitals/3.jpg",
   },
   {
     id: "4",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/4.jpg"),
+    path: "/images/digitals/4.jpg",
   },
   {
     id: "5",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/5.jpg"),
+    path: "/images/digitals/5.jpg",
   },
   {
     id: "6",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/6.jpg"),
+    path: "/images/digitals/6.jpg",
   },
   {
     id: "7",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/7.jpg"),
+    path: "/images/digitals/7.jpg",
   },
   {
     id: "8",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/8.jpg"),
+    path: "/images/digitals/8.jpg",
   },
   {
     id: "9",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/9.jpg"),
+    path: "/images/digitals/9.jpg",
   },
   {
     id: "10",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/10.jpg"),
+    path: "/images/digitals/10.jpg",
   },
   {
     id: "11",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/11.jpg"),
+    path: "/images/digitals/11.jpg",
   },
   {
     id: "12",
-    path: require("/Users/chlo/website/portfolio/src/assets/images/digitals/12.jpg"),
+    path: "/images/digitals/12.jpg",
   },
 ];
 
