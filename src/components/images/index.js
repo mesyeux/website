@@ -189,16 +189,16 @@ const DIGITALS = [
 ];
 
 const SKILLS = {
-  // react: require("/Users/chlo/website/portfolio/src/assets/images/react.png"),
-  angular: require("/Users/chlo/website/portfolio/src/assets/images/angular.png"),
-  html: require("/Users/chlo/website/portfolio/src/assets/images/html.png"),
-  css: require("/Users/chlo/website/portfolio/src/assets/images/css.png"),
-  java: require("/Users/chlo/website/portfolio/src/assets/images/java.png"),
-  javascript: require("/Users/chlo/website/portfolio/src/assets/images/javascript.png"),
-  cplus: require("/Users/chlo/website/portfolio/src/assets/images/c++.png"),
-  typescript: require("/Users/chlo/website/portfolio/src/assets/images/typescript.png"),
-  spring: require("/Users/chlo/website/portfolio/src/assets/images/spring.png"),
-  python: require("/Users/chlo/website/portfolio/src/assets/images/python.png"),
+  react: "/images/react.png",
+  angular: "/images/angular.png",
+  html: "/images/html.png",
+  css: "/images/css.png",
+  java: "/images/java.png",
+  javascript: "/images/javascript.png",
+  cplus: "/images/c++.png",
+  typescript: "/images/typescript.png",
+  spring: "/images/spring.png",
+  python: "/images/python.png",
 };
 
 export { COVERIMAGES, DIGITALS, SKILLS };
