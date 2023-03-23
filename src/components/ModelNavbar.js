@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DropDownItem from "./DropDownItem";
-import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+import {
+  AiFillCaretDown,
+  AiFillCaretUp,
+  AiFillCaretLeft,
+  AiFillCaretRight,
+} from "react-icons/ai";
 import "./ModelNavbar.css";
 
 function ModelNavbar(props) {
@@ -44,9 +49,7 @@ function ModelNavbar(props) {
           </Link>
           <div className="model-navbar-container">
             <div className="menu-icon" onClick={handleClick}>
-              <i
-                className={click ? "fa-solid fa-times" : "fa-solid fa-bars"}
-              ></i>
+              {click ? <AiFillCaretRight /> : <AiFillCaretLeft />}
             </div>
             <ul className={click ? "model-nav-menu active" : "model-nav-menu"}>
               <li className="model-nav-item">

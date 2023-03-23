@@ -173,8 +173,9 @@
     }
   
     .model-nav-menu.active {
-      background: #2d4534;
+      background: var(--beige);
       left: 0;
+      padding: 0;
       transition: all 0.5s ease;
       z-index: 1;
     }
@@ -187,8 +188,8 @@
     }
   
     .model-nav-links:hover {
-      background-color: #fff;
-      color: #242424;
+      background-color: rgba(29, 46, 36, 0.284);
+      color: var(--green);
       border-radius: 0;
     }
   
@@ -211,10 +212,11 @@
       transform: translate(-100%, 60%);
       font-size: 1.8rem;
       cursor: pointer;
+      color: black;
     }
   
     .fa-times {
-      color: #fff;
+      color: black;
       font-size: 2rem;
     }
   

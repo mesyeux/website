@@ -726,6 +726,39 @@ nav.navbar {
   background-color: var(--green);
 }
 
+@media screen and (max-width: 768px) {
+  /* Profile */
+  .profile-pic {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .profile-nav {
+  }
+
+  /* Banner  */ 
+  .banner {
+    padding: 150px 20px 70px 20px;
+  }
+  
+  .banner img {
+    margin-left: 0px;
+  }
+
+  .skills-slider .react-multi-carousel-track .image-item {
+    padding-left: 70px;
+  }
+
+  .item {
+    width: 70%;
+  }
+
+  /* Project */
+  .project-container {
+    margin: 70px 40px 70px 40px;
+  }
+}
+
 .home,
 .services,
 .products,
