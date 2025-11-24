@@ -189,6 +189,7 @@ const DIGITALS = [
 ];
 
 const SKILLS = {
+  pytorch: "/images/pytorch.png",
   react: "/images/react.png",
   angular: "/images/angular.png",
   html: "/images/html.png",
@@ -199,6 +200,10 @@ const SKILLS = {
   typescript: "/images/typescript.png",
   spring: "/images/spring.png",
   python: "/images/python.png",
+  sql: "/images/sql.png",
+  numpy: "/images/numpy.png",
+  pandas: "/images/pandas.png",
+  scikitlearn: "/images/scikitlearn.png",
 };
 
 export { COVERIMAGES, DIGITALS, SKILLS };

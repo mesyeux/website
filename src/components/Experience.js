@@ -1,161 +1,206 @@
-import React from "react";
+import React, { useState } from "react";
 import dbsLogo from "../assets/images/dbs.png";
-import { useState } from "react";
-import { Tab, Row, Col, Nav } from "react-bootstrap";
+import rakutenLogo from "../assets/images/rakuten.png";
+import "./Experience.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 function Experience() {
-  const [showElement, setShowElement] = useState(false);
-  const [activeTab, setActiveTab] = useState("roles");
+  const [activeTabDBS, setActiveTabDBS] = useState("responsibilities");
+  const [activeTabRakuten, setActiveTabRakuten] = useState("responsibilities");
 
-  const handleShow = () => {
-    setShowElement(!showElement);
+  const dbsData = {
+    responsibilities: [
+      "Developed full-stack internal banking applications supporting corporate finance functions (liquidity management)",
+      "Applied Agile methodology with Git, Bitbucket, and Jira following REST and MVC design patterns",
+      "Collaborated cross-functionally with data analysts and back-end teams to ensure data integrity and scalability across systems",
+    ],
+    tech: [
+      "Angular",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Java",
+      "Spring",
+      "Hibernate",
+      "MySQL",
+      "Bitbucket",
+      "Jira",
+      "Git",
+    ],
   };
 
+  const rakutenData = {
+    responsibilities: [
+      "Migrated merchant portal from AngularJS to ReactJS/TypeScript, enhancing performance for e-commerce platform",
+      "Built data-driven full-stack features and APIs using NestJS, Spring, GraphQL, and AWS S3 for scalable data storage and system",
+      "Designed UI mockups in Figma and implemented responsive front-end components",
+      "Communicated across teams to understand requirements and design and engineer solutions",
+    ],
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "JavaScript",
+      "Redux",
+      "AWS",
+      "Docker",
+    ],
+  };
+
+  const tabs = [
+    { key: "responsibilities", label: "Responsibilities" },
+    { key: "tech", label: "Tech Stack" },
+  ];
+
   return (
-    <>
-      <section className="experience" id="experience">
-        <div className="experience-wrapper">
-          <h2>Experience</h2>
-          <div className="experience-item-wrapper">
-            {/* <Row className="align-items-stretch">
-              <Col className="experience-item-img" sm={3}>
-                <img src={dbsLogo} />
-                <p>DBS Software Engineering Internship</p>
-              </Col>
-              <Col className="experience-item-desc" sm={9}>
-                <Tab.Container
-                  id="experience-item-tabs"
-                  defaultActiveKey="first"
-                  fill
-                >
-                  <Row className="align-items-center">
-                    <Col sm={5}>
-                      <Nav variant="pills" className="flex-column">
-                        <Nav.Item>
-                          <Nav.Link eventKey="first">Role</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                          <Nav.Link eventKey="second">
-                            Responsibilities
-                          </Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                          <Nav.Link eventKey="third">Tech Used</Nav.Link>
-                        </Nav.Item>
-                      </Nav>
-                    </Col>
-                    <Col sm={7}>
-                      <Tab.Content>
-                        <Tab.Pane eventKey="first">
-                          Fullstack Software Developer
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="second">
-                          <p>
-                            Participated in full-stack development for internal
-                            banking web applications meant to facilitate
-                            liquidity management for corporations
-                          </p>
-                          <p>
-                            Utilised Angular, Typescript, HTML and CSS for
-                            front-end to enhance existing features and user
-                            interfaces to be more user-friendly
-                          </p>
-                          <p>
-                            Utilised Java, Spring, Hibernate and mySQL to
-                            implement and enhance back-end computations and data
-                            retrieval
-                          </p>
-                          <p>
-                            Carried out testing and fixed bugs in raised issues
-                            before deploying code for user acceptance testing
-                            and release
-                          </p>
-                          <p>
-                            Utilised tools like Bitbucket, Jira and Git for
-                            project management
-                          </p>
-                          <p>
-                            Followed REST, MVC frameworks and Agile methodology
-                          </p>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="third">
-                          Angular, Typescript, HTML, CSS, Java, Spring,
-                          Hibernate, mySQL, Bitbucket, Jira, Git
-                        </Tab.Pane>
-                      </Tab.Content>
-                    </Col>
-                  </Row>
-                </Tab.Container>
-              </Col>
-            </Row> */}
-            <div className="experience-item-img">
-              <img src={dbsLogo} />
-              <p>DBS Software Engineering Internship</p>
-            </div>
-            <div className="experience-item-tabs">
-              <a
-                className={
-                  activeTab === "roles" ? "nav-item active" : "nav-item"
-                }
-                onClick={() => setActiveTab("roles")}
-              >
-                Role
-              </a>
-              <a
-                className={
-                  activeTab === "responsibilities"
-                    ? "nav-item active"
-                    : "nav-item"
-                }
-                onClick={() => setActiveTab("responsibilities")}
-              >
-                Responsibilities
-              </a>
-              <a
-                className={
-                  activeTab === "tech" ? "nav-item active" : "nav-item"
-                }
-                onClick={() => setActiveTab("tech")}
-              >
-                Tech Used
-              </a>
-            </div>
-            <div className="experience-item-desc">
-              {activeTab === "roles" ? (
-                <div>Fullstack Software Engineering Intern</div>
-              ) : activeTab === "responsibilities" ? (
-                <div>
-                  <p>
-                    Participated in full-stack development for internal banking
-                    web applications meant to facilitate liquidity management
-                    for corporations
+    <section className="experience" id="experience">
+      <div className="experience-container">
+        <h2 className="experience-title">Experience</h2>
+
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={40}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          navigation={true}
+          className="experience-swiper"
+        >
+          <SwiperSlide>
+            <div className="experience-card">
+              <div className="experience-card-inner">
+                <div className="experience-company">
+                  <div className="company-logo-wrapper">
+                    <div className="logo-glass-bg-rakuten"></div>
+                    <img
+                      src={rakutenLogo}
+                      alt="Rakuten Logo"
+                      className="company-logo"
+                    />
+                  </div>
+                  <h3 className="company-name">Rakuten Asia</h3>
+                  <p className="company-position">
+                    Full-stack Development Internship
                   </p>
-                  <p>
-                    Enhanced existing features and UI to be more user-friendly
-                    with front-end frameworks
-                  </p>
-                  <p>
-                    Implemented and enhanced back-end computations & data
-                    retrieval
-                  </p>
-                  <p>
-                    Carried out testing and fixed bugs in raised issues before
-                    deploying code for user acceptance testing and release
-                  </p>
-                  <p>Utilised Bitbucket, Jira and Git for project management</p>
-                  <p>REST, MVC frameworks and Agile methodology</p>
                 </div>
-              ) : (
-                <div>
-                  Angular, Typescript, HTML, CSS, Java, Spring, Hibernate,
-                  mySQL, Bitbucket, Jira, Git
+
+                <div className="experience-details">
+                  <div className="tab-navigation">
+                    {tabs.map((tab) => (
+                      <button
+                        key={tab.key}
+                        className={`tab-button ${
+                          activeTabRakuten === tab.key ? "active" : ""
+                        }`}
+                        onClick={() => setActiveTabRakuten(tab.key)}
+                      >
+                        <span className="tab-icon">{tab.icon}</span>
+                        <span className="tab-label">{tab.label}</span>
+                      </button>
+                    ))}
+                  </div>
+
+                  <div className="tab-content">
+                    {activeTabRakuten === "responsibilities" && (
+                      <div className="content-fade-in">
+                        <ul className="responsibilities-list">
+                          {rakutenData.responsibilities.map((item, index) => (
+                            <li key={index} className="responsibility-item">
+                              <span className="bullet">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {activeTabRakuten === "tech" && (
+                      <div className="content-fade-in">
+                        <div className="tech-stack">
+                          {rakutenData.tech.map((tech, index) => (
+                            <span key={index} className="tech-badge">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="experience-card">
+              <div className="experience-card-inner">
+                <div className="experience-company">
+                  <div className="company-logo-wrapper">
+                    <div className="logo-glass-bg-dbs"></div>
+                    <img
+                      src={dbsLogo}
+                      alt="DBS Bank Logo"
+                      className="company-logo"
+                    />
+                  </div>
+                  <h3 className="company-name">DBS Bank</h3>
+                  <p className="company-position">
+                    Software Engineering Internship
+                  </p>
+                </div>
+
+                <div className="experience-details">
+                  <div className="tab-navigation">
+                    {tabs.map((tab) => (
+                      <button
+                        key={tab.key}
+                        className={`tab-button ${
+                          activeTabDBS === tab.key ? "active" : ""
+                        }`}
+                        onClick={() => setActiveTabDBS(tab.key)}
+                      >
+                        <span className="tab-icon">{tab.icon}</span>
+                        <span className="tab-label">{tab.label}</span>
+                      </button>
+                    ))}
+                  </div>
+
+                  <div className="tab-content">
+                    {activeTabDBS === "responsibilities" && (
+                      <div className="content-fade-in">
+                        <ul className="responsibilities-list">
+                          {dbsData.responsibilities.map((item, index) => (
+                            <li key={index} className="responsibility-item">
+                              <span className="bullet">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {activeTabDBS === "tech" && (
+                      <div className="content-fade-in">
+                        <div className="tech-stack">
+                          {dbsData.tech.map((tech, index) => (
+                            <span key={index} className="tech-badge">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </section>
   );
 }
 

@@ -45,6 +45,38 @@ function Skills() {
                     itemClass="image-item"
                   >
                     <div className="item">
+                      <Image draggable={false} src={SKILLS.python}></Image>
+                      <h5>Python</h5>
+                    </div>
+                    <div className="item">
+                      <Image draggable={false} src={SKILLS.pytorch}></Image>
+                      <h5>Pytorch</h5>
+                    </div>
+                    <div className="item">
+                      <Image draggable={false} src={SKILLS.numpy}></Image>
+                      <h5>Numpy</h5>
+                    </div>
+                    <div className="item">
+                      <Image draggable={false} src={SKILLS.pandas}></Image>
+                      <h5>Pandas</h5>
+                    </div>
+                    <div className="item">
+                      <Image draggable={false} src={SKILLS.scikitlearn}></Image>
+                      <h5>scikit-learn</h5>
+                    </div>
+                    <div className="item">
+                      <Image draggable={false} src={SKILLS.sql}></Image>
+                      <h5>SQL</h5>
+                    </div>
+                    <div className="item">
+                      <Image draggable={false} src={SKILLS.java}></Image>
+                      <h5>Java</h5>
+                    </div>
+                    <div className="item">
+                      <Image draggable={false} src={SKILLS.javascript}></Image>
+                      <h5>Javascript</h5>
+                    </div>
+                    <div className="item">
                       <Image draggable={false} src={SKILLS.react}></Image>
                       <h5>React</h5>
                     </div>
@@ -61,14 +93,6 @@ function Skills() {
                       <h5>CSS</h5>
                     </div>
                     <div className="item">
-                      <Image draggable={false} src={SKILLS.java}></Image>
-                      <h5>Java</h5>
-                    </div>
-                    <div className="item">
-                      <Image draggable={false} src={SKILLS.javascript}></Image>
-                      <h5>Javascript</h5>
-                    </div>
-                    <div className="item">
                       <Image draggable={false} src={SKILLS.cplus}></Image>
                       <h5>C++</h5>
                     </div>
@@ -79,10 +103,6 @@ function Skills() {
                     <div className="item">
                       <Image draggable={false} src={SKILLS.spring}></Image>
                       <h5>Spring</h5>
-                    </div>
-                    <div className="item">
-                      <Image draggable={false} src={SKILLS.python}></Image>
-                      <h5>Python</h5>
                     </div>
                   </Carousel>
                 </div>

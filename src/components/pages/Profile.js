@@ -76,10 +76,7 @@ function Profile() {
             <Col sm={4} className="info-container">
               <Tab.Content>
                 <Tab.Pane eventKey="first">
-                  <p>
-                    Chloe Lau is a fashion model based in Singapore, currently
-                    in London.
-                  </p>
+                  <p>Chloe Lau is a fashion model based in Paris.</p>
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
                   <Container className="stats-container">
