@@ -1,144 +1,128 @@
-import React from "react";
-import { Container, Row, Col, Tab } from "react-bootstrap";
-import Nav from "react-bootstrap/Nav";
-import Badge from "react-bootstrap/Badge";
-import planitImg from "../assets/images/planit-image.png";
-import awsImg from "../assets/images/aws.png";
+import React, { useState } from "react";
+import { Container, Row, Col, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import proposalPdf from "../assets/aws_ppt.pdf";
+import "./Projects.css";
 
 function Projects() {
+  const [activeTab, setActiveTab] = useState("recsys");
+
+  const projects = {
+    recsys: {
+      title: "Recommendation System: Collaborative Filtering",
+      tech: [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "Evaluation Metrics",
+        "Hyperparameter Tuning",
+      ],
+      description: [
+        "Researched and developed item-item collaborative filtering system for recommending movies to users",
+        "Preprocessed large dataset (size ~800k)",
+        "Applied statistical analysis and hyperparameter tuning to optimize prediction quality",
+        "Evaluated model with metrics, obtaining RMSE ~0.995, Precision@5 ~0.748, Recall@5 ~0.480 while maintaining efficient runtime and memory usage",
+      ],
+      link: {
+        label: "Source",
+        url: "https://github.com/mesyeux/collab-filtering",
+      },
+    },
+    nlp: {
+      title: "NLP Machine Translation",
+      tech: [
+        "Python",
+        "Pytorch",
+        "SentencePiece",
+        "LSTM",
+        "Embeddings",
+        "Deep Learning",
+        "Fine-Tuning",
+      ],
+      description: [
+        "Explored text generation and translation using deep learning model (seq2seq) using IWSLT dataset (~231K sentence pairs)",
+        "Implemented tokenization with SentencePiece, converted tokens to vector embeddings",
+        "Fine-tuned and optimised model hyperparameters to improve model performance at predicting next token",
+        "Built evaluation pipelines",
+      ],
+      link: {
+        label: "Source",
+        url: "https://github.com/mesyeux/iwslt2017-zh-en",
+      },
+    },
+  };
+
+  const currentProject = projects[activeTab];
+
   return (
-    <>
-      <section className="projects" id="projects">
-        <Container>
-          <Row>
-            <Col>
-              <h2>Projects</h2>
-              <Tab.Container id="projects-tabs" defaultActiveKey="planit">
-                <Nav variant="pills" defaultActiveKey="/home" fill justify>
-                  <Nav.Item>
-                    <Nav.Link eventKey="planit" href="#planit">
-                      PlanIT
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="spa" href="#spa">
-                      SPA
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="aws" href="#aws">
-                      AWS Hackathon
-                    </Nav.Link>
-                  </Nav.Item>
-                </Nav>
-                <Tab.Content className="project-container">
-                  <Tab.Pane eventKey="planit">
-                    <section id="planit">
-                      <h1>PlanIT</h1>
-                      <div className="badge-container">
-                        <Badge pill bg="secondary">
-                          Java
-                        </Badge>
-                        <Badge pill bg="secondary">
-                          JavaFX
-                        </Badge>
-                        <Badge pill bg="secondary">
-                          JUnit
-                        </Badge>
-                        <Badge pill bg="secondary">
-                          Gradle
-                        </Badge>
-                        <Badge pill bg="secondary">
-                          Git
-                        </Badge>
-                        <Badge pill bg="secondary">
-                          SWE Design Principles
-                        </Badge>
-                      </div>
-                      <p className="project-description">
-                        PlanIT is an application for managing tasks, tailored
-                        specifically for NUS Computing students, featuring
-                        simple command formats catered to fast typists.
-                        Interaction is through a CLI, with a GUI created with
-                        JavaFX. The application is written with Java.
-                      </p>
-                      <p className="project-description">
-                        I was in charge of designing and adding certain features
-                        to the brown-field application, such as the ability to
-                        remove task fields and countdown to a task date.
-                      </p>
-                      <div className="project-links">
-                        <Link
-                          to="https://ay2021s2-cs2103t-t10-2.github.io/tp/"
-                          target="_blank"
-                        >
-                          Documentation
-                        </Link>
-                        <Link
-                          to="https://github.com/mesyeux/tp"
-                          target="_blank"
-                        >
-                          Source
-                        </Link>
-                      </div>
-                      <img src={planitImg} className="project-image" />
-                    </section>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="spa">
-                    <section id="spa">
-                      <h1>SPA: Static Program Analyser</h1>
-                      <div className="badge-container">
-                        <Badge pill bg="secondary">
-                          C++
-                        </Badge>
-                        <Badge pill bg="secondary">
-                          Git
-                        </Badge>
-                        <Badge pill bg="secondary">
-                          SWE Design Principles
-                        </Badge>
-                      </div>
-                      <p className="project-description">
-                        A Static Program Analyzer is a tool that helps to debug
-                        by examining source code before a program is run. In
-                        this project, I was in charge of the query processing
-                        subunit, where queries are parsed and validated. I
-                        designed the logic with which components used to
-                        communicate, implemented tokenization for parsing, and
-                        designed the way they were validated. We designed
-                        components and APIs, and also did unit and system
-                        testing.
-                      </p>
-                    </section>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="aws">
-                    <section id="aws">
-                      <h1>AWS Hackathon: Build on, Singapore 2019</h1>
+    <section className="projects" id="projects">
+      <Container>
+        <h2 className="projects-title">Projects</h2>
 
-                      <p className="project-description">
-                        Hackathon Finalist: Innovated and cooperated with 3
-                        other teammates to come up with proposals to alleviate
-                        problems regarding WIFI data using AWS services
-                      </p>
+        {/* Tab Navigation */}
+        <div className="projects-nav">
+          {["recsys", "nlp"].map((key) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`project-tab ${activeTab === key ? "active" : ""}`}
+            >
+              {key === "recsys"
+                ? "Recommendation System"
+                : "Machine Translation"}
+            </button>
+          ))}
+        </div>
 
-                      <div className="project-links">
-                        <a href={proposalPdf} download>
-                          Project Proposal
-                        </a>
-                      </div>
+        <div className="project-content-wrapper">
+          <div className="project-content-centered">
+            <h3 className="project-title">{currentProject.title}</h3>
 
-                      <img src={awsImg} className="project-image" />
-                    </section>
-                  </Tab.Pane>
-                </Tab.Content>
-              </Tab.Container>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    </>
+            <div className="tech-badges">
+              {currentProject.tech.map((tech, index) => (
+                <Badge key={index} className="tech-badge">
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+
+            <div className="project-description">
+              <ul className="description-list">
+                {currentProject.description.map((point, index) => (
+                  <li key={index} className="description-item">
+                    <span className="bullet-dot">•</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {currentProject.link && (
+              <div className="project-link-wrapper">
+                {currentProject.link.download ? (
+                  <a
+                    href={currentProject.link.url}
+                    download
+                    className="project-link"
+                  >
+                    <span className="link-icon">🔗</span>
+                    {currentProject.link.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={currentProject.link.url}
+                    target="_blank"
+                    className="project-link"
+                  >
+                    <span className="link-icon">🔗</span>
+                    {currentProject.link.label}
+                  </Link>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 }
 
