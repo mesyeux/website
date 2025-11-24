@@ -95,21 +95,21 @@ function DevNavBar() {
                 <VscGithubAlt className="dev-social-icon" />
               </Link>
             </div>
-            <Nav.Link
+            {/* <Nav.Link
               href="#resume"
               className={
                 activeLink === "contact" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("contact")}
-            >
-              <button className="vvd" onClick={() => console.log("connect")}>
-                {/* <span>download resume</span> */}
-                <a href={resumePdf} download>
+            > */}
+            {/* <button className="vvd" onClick={() => console.log("connect")}> */}
+            {/* <span>download resume</span> */}
+            {/* <a href={resumePdf} download>
                   resume &nbsp;
                   <BsDownload />
                 </a>
               </button>
-            </Nav.Link>
+            </Nav.Link> */}
           </span>
         </Navbar.Collapse>
       </Container>

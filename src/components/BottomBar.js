@@ -11,7 +11,7 @@ function BottomBar() {
         <div className="copyright">
           <div className="made-by">
             <AiOutlineCopyrightCircle />
-            &nbsp;2023 by Chloe Lau
+            &nbsp;2025 by Chloe Lau
           </div>
         </div>
         <div className="contact">

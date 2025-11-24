@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ChevronDown } from "react-bootstrap-icons";
 import { useState } from "react";
@@ -8,33 +8,44 @@ import { Link } from "react-router-dom";
 function DevBanner() {
   const [loopNum, setLoopNum] = useState(0); //to indicate which index is being displayed
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["CS Student", "Software Engineer Wannabe", "Model"];
+  const toRotate = ["ML & NLP Enthusiast", "Data Science Student", "Model"];
   const [currText, setCurrText] = useState("");
   const period = 2000; //period of time between transition of each word
   const [delta, setDelta] = useState(300 - Math.random() * 100); //how fast one letter comes after another
-  // const [delta, setDelta] = useState(100000000000);
+  const [isVisible, setIsVisible] = useState(true);
+  const bannerRef = useRef(null);
 
   //word gets deleted faster than typed out
 
   useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setDelta(10000000000000);
-      } else {
-        setDelta(300 - Math.random() * 100);
-        setLoopNum(0);
-        setIsDeleting(false);
-        setCurrText("");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0,
+        rootMargin: "0px",
+      }
+    );
+
+    if (bannerRef.current) {
+      observer.observe(bannerRef.current);
+    }
+
+    return () => {
+      if (bannerRef.current) {
+        observer.unobserve(bannerRef.current);
       }
     };
-
-    window.addEventListener("scroll", onScroll);
-    //since we're adding event listener on mount, we have to remove it when component gets removed from the dom
-
-    return () => window.removeEventListener("scroll", onScroll);
-  });
+  }, []);
 
   useEffect(() => {
+    if (!isVisible) {
+      return; // don't run animation when not visible
+    }
+
     let ticker = setInterval(() => {
       tick();
     }, delta);
@@ -42,7 +53,7 @@ function DevBanner() {
     return () => {
       clearInterval(ticker);
     };
-  }, [currText]);
+  }, [currText, delta, isVisible]);
 
   //tick function
   const tick = () => {
@@ -81,8 +92,8 @@ function DevBanner() {
               <span className="wrap">{currText}</span>
             </h1>
             <p>
-              A Computer Science undergraduate at NUS, software engineer & web
-              developer wannabe, and part-time{" "}
+              A M2 Data Science student at Université Paris-Saclay, ML & NLP
+              enthusiast, and part-time{" "}
               <Link to="/portfolio" className="model-link">
                 model
               </Link>
