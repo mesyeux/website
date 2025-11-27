@@ -9,12 +9,12 @@ import Socials from "../Socials";
 export const JobPage = (props) => {
   const pathname = window.location.pathname;
   const folder = pathname.substring(pathname.lastIndexOf("/") + 1);
-  const noOfItems = COVERIMAGES.filter((item) => item.folder === folder)[0][
-    "noOfItems"
-  ];
+
+  // Find the job data
+  const jobData = COVERIMAGES.find((item) => item.folder === folder);
+  const images = jobData?.images || [];
 
   const [photoPath, setPhotoPath] = useState("");
-
   const [showPicture, setShowPicture] = useState(false);
   const handleClose = () => setShowPicture(false);
   const displayModal = (path) => {
@@ -22,21 +22,21 @@ export const JobPage = (props) => {
     setPhotoPath(path);
   };
 
-  const array = Array.from({ length: noOfItems }, (_, i) => i + 1);
   return (
     <>
       <ModelNavbar />
       <div className="job-page-images">
-        {array.map((item) => (
+        {images.map((imagePath, index) => (
           <CardItem
-            src={"/images/" + folder + "/" + item + ".jpg"}
+            key={index}
+            src={imagePath}
             label="lookbook"
             displayModal={displayModal}
           />
         ))}
       </div>
       <Modal show={showPicture} onHide={handleClose}>
-        <img src={photoPath} />
+        <img src={photoPath} alt="" />
       </Modal>
       <Socials />
     </>
