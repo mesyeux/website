@@ -67,7 +67,7 @@ function HeroSection() {
               className={`home-button-background ${
                 hoveredSide === "coder" ? "hero-image-dimmed" : ""
               }`}
-              src="images/shoot1.jpg"
+              src="https://res.cloudinary.com/de1zyaayq/image/upload/v1764283676/uraogmbbptou6xslnevh.jpg"
               alt="Model background"
             />
           </div>
