@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function CardItem(props) {
+  const isVideo =
+    props.src?.endsWith(".mp4") ||
+    props.src?.endsWith(".mov") ||
+    props.src?.endsWith(".webm") ||
+    props.type === "video";
+
   return (
     <>
       <div className="cards__item">
@@ -15,11 +21,22 @@ function CardItem(props) {
           }}
         >
           <div className="img__wrap">
-            <img
-              src={props.src}
-              alt="Portfolio Picture"
-              className="cards__item__img"
-            ></img>
+            {isVideo ? (
+              <video
+                src={props.src}
+                className="cards__item__img"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            ) : (
+              <img
+                src={props.src}
+                alt="Portfolio Picture"
+                className="cards__item__img"
+              />
+            )}
             <p className="img__description"> {props.text} </p>
           </div>
         </Link>
