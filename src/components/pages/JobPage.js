@@ -10,17 +10,22 @@ export const JobPage = (props) => {
   const pathname = window.location.pathname;
   const folder = pathname.substring(pathname.lastIndexOf("/") + 1);
 
-  // Find the job data
   const jobData = COVERIMAGES.find((item) => item.folder === folder);
   const images = jobData?.images || [];
 
   const [photoPath, setPhotoPath] = useState("");
   const [showPicture, setShowPicture] = useState(false);
+
   const handleClose = () => setShowPicture(false);
   const displayModal = (path) => {
     setShowPicture(true);
     setPhotoPath(path);
   };
+
+  const isVideo =
+    photoPath?.endsWith(".mp4") ||
+    photoPath?.endsWith(".mov") ||
+    photoPath?.endsWith(".webm");
 
   return (
     <>
@@ -36,7 +41,11 @@ export const JobPage = (props) => {
         ))}
       </div>
       <Modal show={showPicture} onHide={handleClose}>
-        <img src={photoPath} alt="" />
+        {isVideo ? (
+          <video src={photoPath} controls autoPlay style={{ width: "100%" }} />
+        ) : (
+          <img src={photoPath} style={{ width: "100%" }} alt="" />
+        )}
       </Modal>
       <Socials />
     </>
